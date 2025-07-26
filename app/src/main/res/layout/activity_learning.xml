@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/learningRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvLearningTitleLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="Yay! It’s Time to Learn"
+        android:textColor="#FF2231"
+        android:textSize="28sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvLearningTitleLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLearningTitleLine1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="and Play!"
+        android:textColor="#FF2231"
+        android:textSize="28sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvSelectLesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLearningTitleLine2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Select Lesson"
+        android:textColor="#9C27B0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/learningSpinner"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSelectLesson"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/lesson_options"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:spinnerMode="dropdown" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartLearning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/learningSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Start Learning!"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp" />
+</RelativeLayout>

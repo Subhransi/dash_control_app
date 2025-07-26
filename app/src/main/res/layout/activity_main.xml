@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: Idle"
+        android:textSize="18sp"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnScanAndConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan and Connect to Dash"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSendCommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send LEFT EAR RED"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSayHi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Say Hi"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text="Start Learning!" />
+
+
+</LinearLayout>

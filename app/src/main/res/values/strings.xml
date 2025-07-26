@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DashControlApp</string>
+    <string-array name="lesson_options">
+        <item>Vowel to Word</item>
+        <item>Word to Phrase</item>
+        <item>Conversation</item>
+    </string-array>
+
+</resources>

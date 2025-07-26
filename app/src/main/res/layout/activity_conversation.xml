@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_conversation_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/conversationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conversation Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:id="@+id/conversationImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="Image placeholder" />
+
+
+        <ImageView
+            android:id="@+id/imageViewConversation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="Conversation Image" />
+
+        <LinearLayout
+            android:id="@+id/feedbackButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:padding="0dp">
+
+
+            <ImageButton
+                android:id="@+id/btnCorrect"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+
+                android:background="@android:color/transparent"
+                android:contentDescription="Correct"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick" />
+
+            <ImageButton
+                android:id="@+id/btnWrong"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+
+                android:background="@android:color/transparent"
+                android:contentDescription="Wrong"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cross" />
+
+            <ImageButton
+                android:id="@+id/btnNeutral"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+
+                android:background="@android:color/transparent"
+                android:contentDescription="Neutral"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dnd" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRobotAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robot Answer"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="80dp"/>
+
+
+        <!-- Dice grid (2 rows × 3 columns) -->
+        <GridLayout
+            android:id="@+id/diceGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:layout_marginBottom="24dp"
+            android:useDefaultMargins="true"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/dice1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice1"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/dice2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice2"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/dice3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice3"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/dice4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice4"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/dice5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice5"
+                android:background="@null" />
+
+            <ImageButton
+                android:id="@+id/dice6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/dice6"
+                android:background="@null" />
+        </GridLayout>
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/turnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn to ask: ROBOT"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/nextTurnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next to roll dice: ROBOT"
+            android:textSize="16sp"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="20dp" />
+        <!-- Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDisengaged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disengaged"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#004D40"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="24dp"
+            android:elevation="4dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="24dp"
+            android:elevation="4dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp" />
+
+    </LinearLayout>
+</ScrollView>
